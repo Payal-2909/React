@@ -20,10 +20,11 @@
 //       </header>
 //     </div>
 //   );
+
 // }
 
 // export default App;
-import React, { useState } from 'react';
+/*import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 
 function ExampleComponent() {
@@ -43,4 +44,43 @@ function ExampleComponent() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(<ExampleComponent />);
-export default ExampleComponent;
+export default ExampleComponent;/*
+
+//syntax
+//to install packages: npm install packagename
+//to uninstall packages: npm uninstall packagename
+//to update packages: npm update packagename
+//to check version of a package: npm cowsay-v*/
+
+// import React from 'react';
+// import ReactDOM from 'react-dom/client';
+
+// React.createElement(
+//   'h1',
+//   2909,
+//   'Hello, World!',
+//   'h2',
+//   'payal'
+// );
+// export default function Element() {
+//   return (
+//     <div>
+//       <h1>Hello, World!</h1>
+//       <p>This is a simple React application.</p>
+//             {/* <h2>Hello Payal</h2>
+//             <p>Welcome to the React world!</p> */}
+//     </div>
+//   );
+// }
+import React from 'react';
+
+export default function Element() {
+  return (
+    <div>
+      <h1>Hello, World!</h1>
+      <p>This is a simple React application.</p>
+       <h2>Hello Payal</h2>
+      <p>Welcome to the React world!</p>
+    </div>
+  );
+}
