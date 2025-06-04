@@ -153,8 +153,8 @@ return (
     );
 }
 export default timer;*/
-
-import { useState, useEffect, use } from 'react';
+//usestate and useEffect to fetch data from an API
+/*import { useState, useEffect, use } from 'react';
 
         function useFetch(url) {
       const [data, setData] = useState(null);
@@ -187,4 +187,94 @@ import { useState, useEffect, use } from 'react';
       );
     }
     
-    export default   WeatherComponent;
+    export default   WeatherComponent;*/
+
+//     import React, { useState } from 'react';
+//     import {facker} from '@faker-js/faker';
+//     console.log(facker.image.abstract());
+
+//      function App() {
+//       let [Image, setImage] = useState(facker.image.abstract());
+//       let [Text, setText] = useState("Text");
+       
+//       let handleClick = () => {
+//         setImage(facker.image.urlPicsumPhotos());
+//         setText(facker.name.firstname());
+//       };
+//         return (
+//           <div>
+//             <img src={Image} alt="img-1" />
+//             <h1>{Text}</h1>
+//             <button onClick={handleClick}>Change Image</button>
+//           </div>
+//         );
+//       }
+// export default App;
+    
+/*import React, { useState } from 'react';
+import { facker } from '@faker-js/faker';
+console.log(facker.image.abstract());
+
+export default function App() {
+  const [Image, setImage] = useState(facker.image.abstract());
+  const [Text, setText] = useState("Text");
+
+  const handleClick = () => {
+    setImage(facker.image.urlPicsumPhotos());
+    setText(facker.name.firstname());
+  };
+
+  return (
+    <div>
+      <img src={Image} alt="img-1" />
+      <h1>{Text}</h1>
+      <button onClick={handleClick}>Change Image</button>
+    </div>
+  );
+}*/
+/*import React, { useState } from "react";
+import { faker } from "@faker-js/faker";
+
+export default function App() {
+    let [image, setImage] = useState(faker.image.urlPicsumPhotos());
+    let [text, setText] = useState("Text");
+
+    let handleClick = () => {
+        setImage(faker.image.urlPicsumPhotos());
+        setText(faker.person.firstName());
+    };
+
+    return (
+        <>
+            <img src={image} alt="img-1" />
+            <h1>{text}</h1>
+            <button onClick={handleClick}>Change</button>
+        </>
+    );
+}*/
+
+import React from "react";
+
+function Child({ name, id, skills }) {
+  return (
+    <div>
+      <h2>{name} (ID: {id})</h2>
+      <ul>
+        {skills.map((skill, idx) => (
+          <li key={idx}>{skill}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div>
+      <Child name="Payal" id={2909} skills={["React", "JS", "HTML"]} />
+      <Child name="John" id={1234} skills={["Python", "Django", "Flask"]} />
+    </div>
+  );
+}
+
+export default App;
