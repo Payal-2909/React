@@ -253,7 +253,8 @@ export default function App() {
     );
 }*/
 
-import React from "react";
+
+/*import React from "react";
 
 function Child({ name, id, skills }) {
   return (
@@ -274,7 +275,154 @@ function App() {
       <Child name="Payal" id={2909} skills={["React", "JS", "HTML"]} />
       <Child name="John" id={1234} skills={["Python", "Django", "Flask"]} />
     </div>
-  );
+  );0
 }
 
-export default App;
+export default App;*/
+/*import React from "react";
+
+function Web(props) {
+    console.log(props);
+    return (
+        <div>
+            <h1>name: {props.name}</h1>
+            <h2>id: {props.id}</h2>
+            <ul>
+                {props.skills.map((v, i) => (
+                    <li key={i + 1}>{v}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+export default Web;*/
+/*import React from "react";
+
+function Child(props) {
+    return (
+        <div>
+            <h1>name: {props.name}</h1>
+            <h2>id: {props.id}</h2>
+            <ul>
+                {props.skills.map((v, i) => (
+                    <li key={i + 1}>{v}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+function App() {
+    return (
+        <>
+            <Child name="John" id={101} skills={["React", "JavaScript", "CSS"]} />
+            <Child name="Jane" id={102} skills={["Python", "Django", "Flask"]} />
+            <Child name="Alice" id={103} skills={["Java", "Spring", "Hibernate"]} />
+        </>
+    );
+}
+
+export default App;*/
+/*import React from "react";
+
+// Method i: static defaultProps
+class Child extends React.Component {
+    static defaultProps = {
+        name: "NA",
+        company: "NA",
+        skills: []
+    };
+
+    render() {
+        // Method ii: OR operator for fallback
+        const { name, company, skills } = this.props;
+        return (
+            <div>
+                <h1>name: {name || "NA"}</h1>
+                <h2>company: {company || "NA"}</h2>
+                <ul>
+                    {skills.map((v, i) => (
+                        <li key={i}>{v}</li>
+                    ))}
+                </ul>
+            </div>
+        );
+    }
+}
+
+// Method iii: defaultProps property
+Child.defaultProps = {
+    name: "NA",
+    company: "NA",
+    skills: []
+};
+
+function App() {
+    return (
+        <Child skills={["React", "JavaScript"]} />
+    );
+}
+
+export default App;*/
+/*import React from "react";
+
+// Function component with default props using OR operator and defaultProps property
+function Child({ name, company, skills }) {
+    return (
+        <div>
+           // {/* i) OR operator */
+            /*<h1>name: {name || "NA"}</h1>
+            <h2>company: {company || "NA"}</h2>
+            <ul>
+                {skills.map((v, i) => (
+                    <li key={i}>{v}</li>
+                ))}
+            </ul>
+        </div>
+    );
+}
+
+// ii) defaultProps property
+Child.defaultProps = {
+    name: "NA",
+    company: "NA",
+    skills: []
+};
+
+function App() {
+    // Try removing name or company or skills to see default values
+    return (
+        <Child skills={["React", "JavaScript"]} />
+    );
+}
+
+export default App;*/
+import React from "react";  
+
+const NavbarForChild4 = ({logIn}) => {
+    if(logIn)
+        return(
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>Constact Us</li>
+                    <li>Blogs</li>
+                    <li>Sachin</li>
+                    <li>LogOut</li>
+                </ul>
+            </div>
+        )
+    else 
+        return(
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>Constact Us</li>
+                    <li>Blogs</li>
+                    <li>Youtube</li>
+                    <li>SignUp</li>
+                </ul>
+            </div>
+        )
+}
+export default NavbarForChild4;
